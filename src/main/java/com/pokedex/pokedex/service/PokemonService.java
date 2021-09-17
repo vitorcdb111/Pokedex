@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class PokemonService{
 
-    public PokemonDTO getPokemon(String pokemon) throws Exception
+    public PokemonDTO getPokemon(String pokemon)
     {
         System.out.println("Entrou no service");
 
