@@ -4,7 +4,16 @@
         <img alt="Pokedex logo" src="./assets/images/pokedex-logo.png" style="width: 600px;">
       </div>
 
-      <Search/>    
+      <div class="search-container">
+        <input v-model="searchPokemonData.pokemon" id="name-input" type="text" placeholder="Name / id" required/>
+
+        <div id="search-btn" class="ball-container" @click="search()">
+          <div class="upper-half-ball"></div>
+          <div class="bottom-half-ball"></div>
+          <div class="center-ball"></div>
+          <div class="center-line"></div>
+        </div>
+      </div>  
 
       <div id="pokedex">
         <!-- Left-Panel -->                        
@@ -36,10 +45,35 @@ import TopScreen from './components/TopScreen.vue'
 import BlueButtons from './components/BlueButtons.vue'
 import CenterButtons from './components/CenterButtons.vue'
 import BottomScreen from './components/BottomScreen.vue'
-import Search from './components/Search.vue'
+import service from "@/services/service";
 
 export default {
   name: 'App',
+  data(){
+    return{
+      searchPokemonData:{
+        pokemon: "",
+        retorno:[],
+      }
+    }
+  },
+  methods:
+  {
+    search()
+    {
+      service.pokemon.gottaCatch(this.searchPokemonData.pokemon)
+      .then((response) => {
+        console.log("response");
+        console.log(response);
+        console.log("response 2");
+        console.log(response.data);
+        this.retorno = response.data;
+      })
+      .catch((e) => {
+        console.log(e);
+      })        
+    }
+  },
   components:
   {
     TopLights,
@@ -50,9 +84,8 @@ export default {
     BlueButtons,
     CenterButtons,
     BottomScreen,
-    Search
   }
-};
+};  
 </script>
 
 <style>

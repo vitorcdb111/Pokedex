@@ -1,6 +1,6 @@
 <template>
   <div class="bottom-screens-container">
-    <div id="type-screen" class="right-panel-screen">grass</div>
-    <div id="id-screen" class="right-panel-screen">#1</div>
+    <div v-for="pokemon in $parent.retorno" v-bind:key="pokemon.id" id="type-screen" class="right-panel-screen"> {{pokemon.types}}</div> 
+    <div v-for="pokemon in $parent.retorno" v-bind:key="pokemon.id" id="id-screen" class="right-panel-screen">#{{pokemon.id}}</div>
   </div>
 </template>

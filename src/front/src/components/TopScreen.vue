@@ -1,7 +1,10 @@
 <template>
   <div class="top-screen-container">
     <div id="about-screen" class="right-panel-screen">
-      Height: 70cm Weight: 6.9kg
+       Weight: {{pokemon.weight}}kg 
+      <spanv-for="pokemon in retorno" v-bind:key="pokemon.id" >
+        Height: {{pokemon.height}}cm
+      </span>
     </div>
   </div>
 </template>

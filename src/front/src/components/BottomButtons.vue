@@ -13,7 +13,7 @@
         <div>.</div>
       </div>
       <div class="green-screen">
-        <span id="name-screen">bulbasaur</span> 
+        <span v-for="pokemon in $parent.retorno" v-bind:key="pokemon.id" id="name-screen"> {{pokemon.name}}</span> 
       </div>
       <div class="right-nav-container">
         <div class="nav-button">
