@@ -13,7 +13,7 @@
         <div>.</div>
       </div>
       <div class="green-screen">
-        <span id="name-screen">bulbasaur</span>
+        <span id="name-screen">bulbasaur</span> 
       </div>
       <div class="right-nav-container">
         <div class="nav-button">
@@ -38,3 +38,7 @@
     </div>
   </div>
 </template>
+
+<script>
+
+</script>

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 @RequestMapping(value="/pokedex")
 public class PokedexController {
@@ -17,8 +19,9 @@ public class PokedexController {
 
     //Accept id or name
     @GetMapping(value="/{pokemon}")
-    public PokemonDTO findPokemon(@PathVariable String pokemon)
+    public PokemonDTO findPokemon(@PathVariable String pokemon, HttpServletResponse response)
     {
+        response.setHeader("Access-Control-Allow-Origin", "*");
         return service.getPokemon(pokemon);
     }
 
