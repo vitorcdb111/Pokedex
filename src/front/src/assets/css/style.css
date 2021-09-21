@@ -358,6 +358,14 @@
     font-size: 8.5px;
     overflow-wrap: break-word;
   }
+
+  #name-screen2 {
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 8.5px;
+    overflow-wrap: break-word;
+  }
   
   .circle {
     width: 4px;

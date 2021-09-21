@@ -50,7 +50,8 @@
                 <div class="mini-light red"></div>
                 <div class="mini-light red"></div>
               </div>
-              <div id="main-screen"></div>
+              <div v-if="tipos.length" :style="estiloImagem"></div>
+              <div v-else id="main-screen"></div>
               <div class="bottom-screen-lights">
                 <div class="small-light red">
                   <div class="dot light-red"></div>
@@ -81,7 +82,7 @@
                 <span id="name-screen"> {{retorno.name}}</span>
               </div>
               <div v-else class="green-screen">
-                  <span>bulbasaur</span>
+                  <span id="name-screen2">bulbasaur</span>
               </div>
               <div class="right-nav-container">
                 <div class="nav-button">
@@ -226,6 +227,7 @@ export default {
       retorno:[],
       tipos:[],
       pokemon: "",
+      background: "",
     }
   },
   methods:
@@ -237,7 +239,10 @@ export default {
         console.log("response");
         console.log(response);
         console.log("response 2");
-        //console.log(response.data.types);
+        let id = ('00' + response.data.id).slice(-3);
+        this.background = `url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png)`;
+        console.log(this.background);
+        console.log(this.tipos.length);
         this.tipos = response.data.types;
         this.retorno = response.data;
       })
@@ -246,6 +251,24 @@ export default {
       })
     }
   },
+  computed:
+  {
+    estiloImagem()
+    {
+      return {
+        'height': '100%',
+        'width': '80%',
+        'justify-self': 'center',
+        'background-color': 'var(--main-screen-bg-color)',
+        'border': 'solid black 2px',
+        'border-radius': '5%',
+        'background-image': this.background,
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'background-size': 'contain',
+      }
+    }
+  }
   /*
   components:
   {
