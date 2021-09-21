@@ -223,12 +223,14 @@ export default {
   {
     search()
     {
+      this.pokemon = this.pokemon.toLowerCase();
       service.pokemon.gottaCatch(this.pokemon)
       .then((response) => {
         let id = ('00' + response.data.id).slice(-3);
         this.background = `url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png)`;
         this.tipos = response.data.types;
         this.retorno = response.data;
+        this.pokemon = "";
       })
       .catch((e) => {
         console.log(e);
