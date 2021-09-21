@@ -201,23 +201,12 @@
             <div class="right-panel-screen">#1</div>
           </div>
         </div>
-
         <!-- End of Right-panel -->
       </div>
   </div>
 </template>
 
 <script>
-/*
-import TopLights from './components/TopLights.vue'
-import CenterScreen from './components/CenterScreen.vue'
-import BottomButtons from './components/BottomButtons.vue'
-import BlankContainer from './components/BlankContainer.vue'
-import TopScreen from './components/TopScreen.vue'
-import BlueButtons from './components/BlueButtons.vue'
-import CenterButtons from './components/CenterButtons.vue'
-import BottomScreen from './components/BottomScreen.vue'
- */
 import service from "@/services/service";
 
 export default {
@@ -236,13 +225,8 @@ export default {
     {
       service.pokemon.gottaCatch(this.pokemon)
       .then((response) => {
-        console.log("response");
-        console.log(response);
-        console.log("response 2");
         let id = ('00' + response.data.id).slice(-3);
         this.background = `url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png)`;
-        console.log(this.background);
-        console.log(this.tipos.length);
         this.tipos = response.data.types;
         this.retorno = response.data;
       })
@@ -269,19 +253,6 @@ export default {
       }
     }
   }
-  /*
-  components:
-  {
-    TopLights,
-    CenterScreen,
-    BottomButtons,  
-    BlankContainer,  
-    TopScreen,
-    BlueButtons,
-    CenterButtons,
-    BottomScreen,
-  }
-   */
 };  
 </script>
 
