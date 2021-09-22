@@ -47,6 +47,11 @@
     align-items: center;
     background-color: var(--secondary-bg-color);
   }
+
+  body{
+    background-image: url('https://cutewallpaper.org/21/pokemon-pixel-wallpaper/PokAcopymon-Gold-and-Silver-HD-Wallpaper-Background-Image-.png');
+    background-size: 1920px 1000px;
+  }
   
   .logo {
     justify-self: start;

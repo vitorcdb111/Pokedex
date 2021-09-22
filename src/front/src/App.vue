@@ -1,5 +1,5 @@
 <template>
-   <div id="app">    
+   <div id="app">
       <div class="logo">
         <img alt="Pokedex logo" src="./assets/images/pokedex-logo.png" style="width: 600px;">
       </div>
@@ -44,6 +44,7 @@
               </div>
             </div>
           </div>
+          <!-- Center Screen -->
           <div class="screen-container">
             <div class="screen">
               <div class="top-screen-lights">
@@ -65,6 +66,7 @@
               </div>
             </div>
           </div>
+          <!-- Bottom Buttons -->
           <div class="buttons-container">
             <div class="upper-buttons-container">
               <div class="big-button"></div>
@@ -115,7 +117,7 @@
             <svg height="100%" width="100%">
               <polyline
                   points="0,0 0,40 138,40 158,75 250,75 250,0 0,0"
-                  style="fill: #f2f2f2; stroke: none; stroke-width: 3"
+                  style="fill: #78a0f8; stroke: none; stroke-width: 3"
               />
               <polyline
                   points="0,40 138,40 158,75 250,75"
