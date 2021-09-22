@@ -1,6 +1,6 @@
 # Pokedéx
 
-💡 Uma pokédex simples, onde você pesquisa o pokémon que deseja saber os dados. É possível pesquisar pelo número dele na pokdex ou pelo nome do pokémon.
+💡 Pokédex simples, onde você pesquisa o pokémon que deseja saber os dados. É possível pesquisar pelo número dele na pokdex ou pelo nome do pokémon.
 
 📜 Projeto para estudo de como consumir uma API com Spring Boot. Foi consumida a API da pokeapi e no front usado o projeto da codpen como base. 
 
