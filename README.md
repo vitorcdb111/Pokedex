@@ -1,18 +1,16 @@
-# Untitled
-
 # Pokedéx
 
-📜 Projeto para estudo de como consumir uma API com Spring Boot. 
+💡 Uma pokedéx simples, onde você pesquisa o pokémon que deseja saber os dados. É possível pesquisar pelo número dele na pokedex ou pelo nome do pokémon.
+
+📜 Projeto para estudo de como consumir uma API com Spring Boot. Foi consumida a API da pokeapi e no front usado o projeto da codpen como base. 
 
 Backend - Java com Spring Boot
 
 Frontend - VueJS
 
 <p align="center">
-    <img src="gold-silver.png" alt="My cool logo"/>
+    <img src="print.png" alt="Imagem"/>
 </p>
-
-💡 Uma pokedéx simples, onde você pesquisa o pokémon que deseja saber os dados. É possível pesquisar pelo número dele na pokedex ou pelo seu nome.
 
 ## Mentions
 
@@ -22,10 +20,9 @@ Frontend - VueJS
 
 ## 💻 Configuração para uso
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Para rodar o projeto basta executar npm install e depois run serve.
 
 ```
 npm install
 npm run serve
-
 ```
